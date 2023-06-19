@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Condensed&family=Chivo+Mono&family=Inconsolata&family=Jost:wght@400;700&family=Montserrat&family=Mulish:wght@200;400&family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&family=Sono&family=Space+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-yellow: #f8ff1c;
+  --primary-green: #50ffaf;
+  --primary-pink: #ff00f6;
+  --primary-purple: #9723c9;
+  --primary-black: #000000;
+}
+
+body {
+  font-family: "Jost", Kokoro, sans-serif;
+  background-color: var(--primary-green);
+  color: var(--primary-black);
+  text-transform: lowercase;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text {
+  background-color: transparent;
+  border: none;
+  /* border-top: 1px double ; */
+  border-top: 5px solid var(--primary-black);
+  border-right: 5px solid var(--primary-black);
+  /* border-right: double var(--primary-pink); */
+  border-left: 1px solid var(--primary-black);
+  /* border-left: double var(--primary-pink); */
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  /* Prevent the text from wrapping */
+  white-space: nowrap;
+}
+
+.text:last-of-type {
+  border-bottom: 5px solid var(--primary-black);
+  /* border-bottom: double; */
+}
+
+.text.active {
+  display: flex;
+}
+
+.text #icon {
+  display: none;
+  font-size: 25px;
+}
+
+.text.active #icon {
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px 10px;
+  transition: 0.3s ease-in;
+}
+
+.text.active #icon:hover,
+.text i:hover {
+  color: var(--primary-pink);
+}
+
+.text-img {
+  display: none;
+  margin: 5px 0 25px;
+  /* border-radius: 5px; */
+  /* display: block; */
+  top: 20px;
+  left: -25px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center center;
+  transition: 0.5s ease-in-out;
+}
+
+.text-img img {
+  width: 100%;
+  outline: 5px solid var(--primary-yellow);
+  box-shadow: 15px 15px;
+}
+
+.text i {
+  margin: 0 auto 30px;
+  color: var(--primary-black);
+}
+
+.text-title {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* A setting when text is active and text is on */
+.text.active .text-img {
+  position: relative;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.text-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.text-toggle:focus,
+.text-toggle:active,
+.text.active #icon:focus,
+.text.active #icon:active {
+  outline: transparent;
+  background-color: transparent;
+}
+
+/* .text-toggle:focus {
+    outline: transparent;
+  } */
+
+.text-toggle .fa-chevron-up {
+  display: none;
+}
+
+.text.active .text-toggle .fa-chevron-up {
+  display: block;
+}
+
+/* We want to remove chevron Icon when the text is shown */
+.text.active .text-toggle .fa-chevron-down {
+  display: none;
+}
+
+.img__description {
+  position: absolute;
+  top: 77%;
+  bottom: 0;
+  left: 70%;
+  right: 0%;
+  background: var(--primary-pink);
+  color: var(--primary-black);
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.text-img:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+  box-shadow: 10px 10px;
+}
+
+@media (max-width: 30em) {
+  .text {
+    position: relative;
+    flex-direction: column;
+    margin: 0 0.625rem;
+  }
+
+  .text i {
+    margin-top: 0.625rem;
+    margin-bottom: 0;
+  }
+
+  .text.active #icon {
+    margin-top: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .text-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+  }
+
+  .text-img img {
+    outline: 5px solid var(--primary-yellow);
+    box-shadow: 10px 10px;
+  }
+  .img__description {
+    top: 73%;
+    bottom: 0%;
+    left: 50%;
+    right: 5%;
+    font-size: 1rem;
+  }
+  .text-img:hover .img__description {
+    box-shadow: 5px 5px;
+  }
+}

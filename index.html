@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/earlyaccess/kokoro.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo.png" type="icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+
+  <body>
+    <audio id="cloudy" src="sounds/cloudy.mp3"></audio>
+    <audio id="lightning" src="sounds/lightning.mp3"></audio>
+    <audio id="rainy" src="sounds/rainy.mp3"></audio>
+    <audio id="snowy" src="sounds/snowy.mp3"></audio>
+    <audio id="sunny" src="sounds/sunny.mp3"></audio>
+    <audio id="typhoon" src="sounds/typhoon.mp3"></audio>
+    <audio id="weather" src="sounds/weather.mp3"></audio>
+    <audio id="windy" src="sounds/windy.mp3"></audio>
+
+    <h1>Weather</h1>
+    <div class="container">
+      <!-- cloudy -->
+      <div class="text">
+        <h3 class="text-title">Cloudy</h3>
+        <a onclick="document.getElementById('cloudy').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1524476020173-fe0a405e8b80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          />
+          <p class="img__description">くもり</p>
+        </div>
+      </div>
+      <!-- cloudy end -->
+
+      <!-- lightning -->
+      <div class="text">
+        <h3 class="text-title">Lightning</h3>
+        <a onclick="document.getElementById('lightning').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1500674425229-f692875b0ab7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          />
+          <p class="img__description">かみなり</p>
+        </div>
+      </div>
+      <!-- lightning end -->
+
+      <!-- rainy -->
+      <div class="text">
+        <h3 class="text-title">Rainy</h3>
+        <a onclick="document.getElementById('rainy').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1513172128806-2d00531a9f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+          />
+          <p class="img__description">あめがふる</p>
+        </div>
+      </div>
+      <!-- rainy end -->
+
+      <!-- snowy -->
+      <div class="text">
+        <h3 class="text-title">Snowy</h3>
+        <a onclick="document.getElementById('snowy').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          />
+          <p class="img__description">ゆきがふる</p>
+        </div>
+      </div>
+      <!-- snowy end -->
+
+      <!-- sunny -->
+      <div class="text">
+        <h3 class="text-title">Sunny</h3>
+        <a onclick="document.getElementById('sunny').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1612863229236-60722f5ef8c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          />
+          <p class="img__description">はれ</p>
+        </div>
+      </div>
+      <!-- sunny end -->
+
+      <!-- typhoon -->
+      <div class="text">
+        <h3 class="text-title">Typhoon</h3>
+        <a onclick="document.getElementById('typhoon').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1601110958456-0bee398ce406?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          />
+          <p class="img__description">たいふう</p>
+        </div>
+      </div>
+      <!-- typhoon end -->
+
+      <!-- weather -->
+      <div class="text">
+        <h3 class="text-title">Weather</h3>
+        <a onclick="document.getElementById('weather').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1590055531615-f16d36ffe8ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fHdlYXRoZXIlMjBmb3JlY2FzdGluZ3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+          />
+          <p class="img__description">てんき</p>
+        </div>
+      </div>
+      <!-- weather end -->
+
+      <!-- windy -->
+      <div class="text">
+        <h3 class="text-title">Windy</h3>
+        <a onclick="document.getElementById('windy').play();"
+          ><i id="icon" class="fas fa-volume-up"></i
+        ></a>
+        <button class="text-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <div class="text-img">
+          <img
+            class="text-img"
+            src="https://images.unsplash.com/photo-1505672678657-cc7037095e60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          />
+          <p class="img__description">かぜがふく</p>
+        </div>
+      </div>
+      <!-- windy end -->
+    </div>
+
+    <!-- container end -->
+    <script src="script.js"></script>
+  </body>
+</html>
